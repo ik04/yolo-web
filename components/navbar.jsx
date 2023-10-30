@@ -9,9 +9,12 @@ export const Navbar = () => {
   ];
   return (
     <div className="w-full bg-main h-[7rem] flex justify-between px-[140px] items-center">
-      <div className="Logo font-display text-[50px] text-highlight">
+      <Link
+        href={"/"}
+        className="Logo font-display text-[50px] text-highlight cursor-default"
+      >
         Run<span className="text-white">way</span>
-      </div>
+      </Link>
       <div className="navlinks flex items-center justify-between mt-2">
         {navLinks.map((navlink) => (
           <Link
