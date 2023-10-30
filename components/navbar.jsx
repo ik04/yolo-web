@@ -4,7 +4,7 @@ import React from "react";
 export const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Model1", href: "/" },
+    // { name: "Model1", href: "/" },
     { name: "YoloV8n", href: "/yolo-v8" },
   ];
   return (
