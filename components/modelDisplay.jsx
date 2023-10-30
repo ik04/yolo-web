@@ -6,17 +6,20 @@ import { Label } from "./ui/label";
 import Image from "next/image";
 
 export const ModelDisplay = () => {
+  // todo: shift src to env
   const [isStart, setIsStart] = useState(false);
   const [toggleFeed, setToggleFeed] = useState(false);
   const [isLoading, setIsLoading] = useState(false); //* for file upload shit
+  const [src, setSrc] = useState("http://localhost:5000/video_feed");
   const handleStartFeed = async () => {
-    setIsStart(true);
+    setSrc("http://localhost:5000/video_feed");
     setToggleFeed(true);
+    setIsStart(true);
   };
   const handleStopFeed = async () => {
-    // api call
-    setToggleFeed(false);
+    setSrc("");
     setIsStart(false);
+    // setToggleFeed(false);
   };
 
   return (
@@ -29,11 +32,7 @@ export const ModelDisplay = () => {
           </h1>
           <div className="display rounded-[20px] h-[630px] w-[1140px] bg-main2 ">
             {toggleFeed && (
-              <img
-                src={"http://localhost:5000/video_feed"}
-                alt="Network Error"
-                className="w-full h-full rounded-[20px]"
-              />
+              <img src={src} className="w-full h-full rounded-[20px]" />
             )}
           </div>
           <div className="buttons mt-5 flex items-center m-3 space-x-10">
@@ -45,7 +44,10 @@ export const ModelDisplay = () => {
                 <p className="font-base text-[25px]">Live Feed</p>
               </div>
             ) : (
-              <div className="live w-[461px] h-[80px] cursor-pointer flex justify-center items-center bg-main rounded-full border-red-700 border text-red-700 hover:bg-red-700 hover:text-white duration-200 transition-all">
+              <div
+                onClick={handleStopFeed}
+                className="live w-[461px] h-[80px] cursor-pointer flex justify-center items-center bg-main rounded-full border-red-700 border text-red-700 hover:bg-red-700 hover:text-white duration-200 transition-all"
+              >
                 <p className="font-base text-[25px]">Stop Feed</p>
               </div>
             )}
