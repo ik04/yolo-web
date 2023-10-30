@@ -2,6 +2,9 @@ import React from "react";
 import { Navbar } from "@/components/navbar";
 
 export const Landing = () => {
+  // todo: make responsive
+  // todo: move navbars to layout.js (just cause)
+
   return (
     <div className="h-screen bg-main flex flex-col">
       <Navbar />

@@ -5,18 +5,18 @@ export const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Model1", href: "/" },
-    { name: "YoloV5nu", href: "/" },
+    { name: "YoloV8n", href: "/yolo-v8" },
   ];
   return (
     <div className="w-full bg-main h-[7rem] flex justify-between px-[140px] items-center">
       <div className="Logo font-display text-[50px] text-highlight">
         Run<span className="text-white">way</span>
       </div>
-      <div className="navlinks flex items-center justify-between w-[25%] mt-2">
+      <div className="navlinks flex items-center justify-between mt-2">
         {navLinks.map((navlink) => (
           <Link
             href={navlink.href}
-            className="font-base text-highlight text-[20px]"
+            className="font-base px-10 text-highlight text-[20px]"
           >
             {navlink.name}
           </Link>
