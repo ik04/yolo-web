@@ -28,7 +28,7 @@ export const ModelDisplay = () => {
       <div className="h-[85%] flex justify-center items-center">
         <div className="display-container flex flex-col items-center justify-center">
           <h1 className="text-highlight font-base text-[50px] text-center">
-            Yolo V5 Nano-Ultralytics
+            Yolo V8 Nano-Ultralytics
           </h1>
           <div className="display rounded-[20px] h-[630px] w-[1140px] bg-main2 ">
             {toggleFeed && (
@@ -51,13 +51,13 @@ export const ModelDisplay = () => {
                 <p className="font-base text-[25px]">Stop Feed</p>
               </div>
             )}
-            <Label
+            {/* <Label
               htmlFor="video"
               className="live w-[461px] h-[80px] cursor-pointer flex justify-center items-center bg-main rounded-full border-highlight border text-highlight hover:bg-highlight hover:text-white duration-200 transition-all"
             >
               <p className="font-base text-[25px]">Upload Video</p>
             </Label>
-            <Input type="file" id="video" className="hidden" />
+            <Input type="file" id="video" className="hidden" /> */}
           </div>
         </div>
       </div>
