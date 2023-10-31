@@ -4,6 +4,7 @@ import { Navbar } from "@/components/navbar";
 export const Landing = () => {
   // todo: make responsive
   // todo: move navbars to layout.js (just cause)
+  // todo: handle errors using toast
 
   return (
     <div className="h-screen bg-main flex flex-col">
@@ -14,8 +15,7 @@ export const Landing = () => {
             Runway
           </h1>
           <p className="text-white font-base text-[30px] text-center w-[60%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae
-            mauris at est
+            A Showing of object detection on the raspberry pi using YOLO
           </p>
         </div>
       </div>
