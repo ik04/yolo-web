@@ -19,7 +19,9 @@ export const ModelDisplay = () => {
   const handleStopFeed = async () => {
     setSrc("");
     setIsStart(false);
-    // setToggleFeed(false);
+    setTimeout(() => {
+      setToggleFeed(false);
+    }, 1000);
   };
 
   return (
